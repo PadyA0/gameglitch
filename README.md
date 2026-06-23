@@ -26,18 +26,26 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+
+This game takes in number guesses from the user. The player has 8 attempts to find the right number that was randomly chosen behind the scenes.
+
 - [ ] Detail which bugs you found.
+
+The bugs I noticed were in the scoring system, the reverse hint logic, and the persistent banners. 
+
 - [ ] Explain what fixes you applied.
+
+The calculations for the scoring was fixed. I added enforcements for boundary checking, so the numbers falling out of range would be dismissed by the game.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters a guess of 4
+2. Game returns "Too Low"
+3. User enters a guess of 10 -> Game returns "Too High"
+4. Score uodates correctly after each guess
+5. Game ends after the correct guess
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
@@ -48,6 +56,17 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 # pytest tests/
 # ========================= X passed in 0.XXs =========================
 ```
+here are the results of running the test
+ python -m pytest
+============================================================= test session starts ==============================================================
+platform win32 -- Python 3.14.5, pytest-9.0.3, pluggy-1.6.0
+rootdir: C:\Users\padya\vibecoding\game-glitch\gameglitch
+plugins: anyio-4.13.0
+collected 21 items                                                                                                                              
+
+tests\test_game_logic.py .....................                                                                                            [100%]
+
+============================================================== 21 passed in 0.11s ==============================================================
 
 ## 🚀 Stretch Features
 

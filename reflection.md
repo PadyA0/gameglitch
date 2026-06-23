@@ -50,12 +50,28 @@ The AI helped me understand how the scoring worked and how it was faulty because
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Streamlit reruns the entire script from top to bottom every time the user interacts with the app. Session state is the only place where values survive those reruns. 
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
+
+I learned to triple check the suggested changes from AI agents; that is what separates vibecoding from AI engineering.
+
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+
+Writing small reproductible tests.
+
+Keeping a bug log table.
+
+Prompting AI with contrained instructions instead of vague zero shots.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+
+This project taught me not to just ingest everything that an agent suggests. I will validate all the AI generated code with tests before trusting them from now on.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+I thought AI generated work was completely untrustworthy, but I realize it is more nuanced than this. I now see how these agents can be collaborators intead of the brain leading the production. Human overview, directions, and validations are so needed for secure code.
